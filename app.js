@@ -20,11 +20,16 @@ function inserir(lg,sn,mail){
     })
 } 
 
-inserir("dennermarcos", "12345", "dennermarcos@gmail.com" )
+function selecionaporid(id){
+    let sql = "select = fom users where id = ?"
+    connection.query(sql,id, function(error,results,fields))
+    if(error) throw error
+    console.log ("selecionado: "+ results[0].id + "i" + results[0].login + ":" + results[0].email)
+}
 
-
-
-inserir("paul","1234","paul@gmail.com") 
+function selecionartudo(id){
+    let sql = "delete from noors whwre id ="
+}
   
 connection.end()
     
