@@ -28,7 +28,13 @@ function selecionaporid(id){
 }
 
 function selecionartudo(id){
-    let sql = "delete from noors whwre id ="
+    let sql = "delete from noors whwre id = ?"
+    connection.query(sql,id, function(error,results,fields){
+        if(error) throw error
+        console.log("selecionado:" + results[0].id + ":" results[0].login + ":" results[0].email)
+    
+               )
+    })
 }
   
 connection.end()
